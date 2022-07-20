@@ -72,6 +72,11 @@ message ScopeMetrics {
 
   // This schema_url applies to all metrics in the "metrics" field.
   string schema_url = 3;
+    // Determins if the metrics are a sli metrics.
+  bool is_sli = 4;
+
+  // Details of the SLI
+  repeated opentelemetry.proto.common.v1.KeyValue sli_detail = 5;
 }
 
 // Defines a Metric which has one or more timeseries.  The following is a
